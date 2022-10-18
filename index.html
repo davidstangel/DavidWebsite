@@ -1,10 +1,29 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>SHOPSAM</title>
+<title>David Site</title>
 </head>
 <body class="is-preload">
 <center><div id="paypal-button-container-P-238440108W494320DMNHJRMQ"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=AVCdaeXXteQBpcw1ZKgE7Mpsd93wlAaGKfkjcbjsppiwvQIH-tNy0-t7n_HETWiLmvYyUBmR-lBRCF_h&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'pill',
+          color: 'black',
+          layout: 'vertical',
+          label: 'subscribe'
+      },
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({
+          /* Creates the subscription */
+          plan_id: 'P-238440108W494320DMNHJRMQ'
+        });
+      },
+      onApprove: function(data, actions) {
+        alert(data.subscriptionID); // You can add optional success message for the subscriber here
+      }
+  }).render('#paypal-button-container-P-238440108W494320DMNHJRMQ'); // Renders the PayPal button
 </script></center>
 <center><form action="https://www.paypal.com/donate" method="post" target="_top">
 <input type="hidden" name="hosted_button_id" value="PJPQKXLERYA2U" />
