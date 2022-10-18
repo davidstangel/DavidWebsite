@@ -4,27 +4,7 @@
 <title>SHOPSAM</title>
 </head>
 <body class="is-preload">
-<div id="paypal-button-container-P-1V118271PV303751LMNHSQLQ"></div>
-<script src="https://www.paypal.com/sdk/js?client-id=AVCdaeXXteQBpcw1ZKgE7Mpsd93wlAaGKfkjcbjsppiwvQIH-tNy0-t7n_HETWiLmvYyUBmR-lBRCF_h&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
-<script>
-  paypal.Buttons({
-      style: {
-          shape: 'rect',
-          color: 'black',
-          layout: 'vertical',
-          label: 'subscribe'
-      },
-      createSubscription: function(data, actions) {
-        return actions.subscription.create({
-          /* Creates the subscription */
-          plan_id: 'P-1V118271PV303751LMNHSQLQ'
-        });
-      },
-      onApprove: function(data, actions) {
-        alert(data.subscriptionID); // You can add optional success message for the subscriber here
-      }
-  }).render('#paypal-button-container-P-1V118271PV303751LMNHSQLQ'); // Renders the PayPal button
-</script>
+<a href="https://checkout.stripe.com/c/pay/cs_live_a1NDVzXlwFnIKj0OiXavBUZnAgd5D3t7JQCQWNLOpW40KzHSjnlRj5ClCh#fidkdWxOYHwnPyd1blppbHNgWjA0SXBKVG5HVUtHfWlcNTBpQXwwUjFKbnVtdV9jTzExYXNoQkpvN1QwNVByZHV3bWNmNDxNd1NkQHI1d2JqR3JMYDJQSVBUbmlwZ1RuPVNpYEdhdUFPN2BENTVzXENOYz1GTScpJ3VpbGtuQH11anZgYUxhJz8nMnZMZEJNZExQPWFNZ0FKMWJiJ3gl">The Good Stuff</a>
 <!-- Wrap
 <!--<h3>Paypal:</h3>
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="button" onclick="printPopUp()">
