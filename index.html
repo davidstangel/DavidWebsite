@@ -1,27 +1,422 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<title>SHOPSAM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="INSPIRO" />
+    <meta name="description" content="St Angel Consulting">
+    <link rel="icon" type="image/png" href="Pictures/DavidLogo.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Document title -->
+    <title>St Angel Consulting</title>
+    <!-- Stylesheets & Fonts -->
+    <link href="css/plugins.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+	<link href="http://fonts.cdnfonts.com/css/georgia" rel="stylesheet">
+
 </head>
-<body class="is-preload">
-<strong><a href="https://checkout.stripe.com/c/pay/cs_live_a1NDVzXlwFnIKj0OiXavBUZnAgd5D3t7JQCQWNLOpW40KzHSjnlRj5ClCh#fidkdWxOYHwnPyd1blppbHNgWjA0SXBKVG5HVUtHfWlcNTBpQXwwUjFKbnVtdV9jTzExYXNoQkpvN1QwNVByZHV3bWNmNDxNd1NkQHI1d2JqR3JMYDJQSVBUbmlwZ1RuPVNpYEdhdUFPN2BENTVzXENOYz1GTScpJ3VpbGtuQH11anZgYUxhJz8nMnZMZEJNZExQPWFNZ0FKMWJiJ3gl"><p style="color:red;font-size:40px;">SUBSCRIBE HERE!! & HELP SUPPORT THE CAUSE!</p></a></strong>
-<!-- Wrap
-<!--<h3>Paypal:</h3>
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" class="button" onclick="printPopUp()">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>-->
-<center><div id="paypal-button-container-P-238440108W494320DMNHJRMQ"></div>
-</script></center>
-<center><form action="https://www.paypal.com/donate" method="post" target="_top">
-<input type="hidden" name="hosted_button_id" value="PJPQKXLERYA2U" />
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-</form></form>
-</center></section>
+
+<body>
+
+
+    <!-- Body Inner -->
+    <div class="body-inner">
+
+
+        <!-- Topbar -->
+        <div id="topbar" class="topbar-fullwidth d-none d-lg-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <ul class="top-menu">
+                            <li><a href="#">Phone: +1  (407) 718-9695</a></li>
+                            <li><a href="#">Email: stangeldavid97@gmail.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 d-none d-sm-block">
+                        <div class="social-icons social-icons-colored-hover">
+                            <ul>
+                                <li class="social-facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li class="social-twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li class="social-linkedin"><a href="https://www.linkedin.com/in/robert-l-stevenson-jr-phd-b3a13a26/"><i class="fab fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end: Topbar -->
+
+        <!-- Header -->
+        <header id="header" data-fullwidth="true">
+            <div class="header-inner">
+                <div class="container">
+                    <!--Logo-->
+					
+                    <div id="logo"><a href="index.html"
+					<span style="float:left;margin-left: +10px; margin-top: -10px"><font size="+2.5">St Angel Consulting</font></span>
+                           					 
+
+</a> </div>
+<img src="Pictures/DavidLogo.png" style="float:left;width:120px;height:120px;margin-left: +120px; margin-top: +50px"></img>
+                    <!--End: Logo-->
+
+                    <!-- Search -->
+                   <!-- <div id="search"><a id="btn-search-close" class="btn-search-close" aria-label="Close search form"><i class="icon-x"></i></a>
+                        <form class="search-form" action="search-results-page.html" method="get">
+                            <input class="form-control" name="q" type="text" placeholder="Type & Search..." />
+                            <span class="text-muted">Start typing & press "Enter" or "ESC" to close</span>
+                        </form>
+                    </div>-->
+                    <!-- end: search -->
+                    <!--Header Extras-->
+					
+                    <!--end: Header Extras-->
+                    <!--Navigation Resposnive Trigger-->
+                    <div id="mainMenu-trigger"> <a class="lines-button x"><span class="lines"></span></a> 
 </div>
-</div>
+                    <!--end: Navigation Resposnive Trigger-->
+                    <!--Navigation-->
+                    <div id="mainMenu">
+
+                        <div class="container">
+                            <nav>
+                                <ul>
+								<li></li>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li class="dropdown"><a href="#Mission">Mission & Vision</a>
+                                    </li>
+                                    <li class="dropdown"><a href="#Do">What We Do</a>
+                                    </li>
+                                    <li class="dropdown mega-menu-item"><a href="#Test">Testimonials</a>
+                                    </li>
+                                    <li class="dropdown"><a href="#History">Company History</a>
+                                    </li>
+                                    <li class="dropdown mega-menu-item"><a href="#Contact">Contact</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                    </div>
+                    <!--end: Navigation-->
+                </div>
+            </div>
+        </header>
+        <!-- end: Header -->
+
+        <!-- Inspiro Slider -->
+        <div id="slider" class="inspiro-slider slider-halfscreen dots-dark arrows-dark dots-creative" data-fade="true" data-height-xs="360">
+
+            <!-- Slide 1 -->
+           <!-- <div class="slide background-image" style="background-image:url('/Pictures/Headshot1.jpeg');">
+                <div class="container">
+                    <div class="slide-captions text-end">
+                        <!-- Captions -->
+            <!--            <span class="strong text-dark">Welcome, We are</span>
+                        <h2 class="text-dark text-lg">RSA cultural Consultants</h2>
+                        <a class="btn btn-dark">Get in Touch</a>
+                        <!-- end: Captions -->
+              <!--      </div>
+                </div>
+            </div>-->
+            <!-- end: Slide 1 -->
+
+            <!-- Slide 2 -->
+            <div class="slide" style="background-image:url('/Pictures/Green.jpeg');">
+                <div class="container">
+                    <div class="slide-captions text-end">
+                        <!-- Captions -->
+						
+                        <h2 class="text text-lg" style="color:#FF4500" align="left" >St Angel Consulting</h2>
+
+                        <a align="center" class="btn btn-dark" style="height:100px;width:200px" href="https://checkout.stripe.com/c/pay/cs_live_a1NDVzXlwFnIKj0OiXavBUZnAgd5D3t7JQCQWNLOpW40KzHSjnlRj5ClCh#fidkdWxOYHwnPyd1blppbHNgWjA0SXBKVG5HVUtHfWlcNTBpQXwwUjFKbnVtdV9jTzExYXNoQkpvN1QwNVByZHV3bWNmNDxNd1NkQHI1d2JqR3JMYDJQSVBUbmlwZ1RuPVNpYEdhdUFPN2BENTVzXENOYz1GTScpJ3VpbGtuQH11anZgYUxhJz8nMnZMZEJNZExQPWFNZ0FKMWJiJ3gl" ><font size="+2.5">SUBSCRIBE</font></a>
+                        <!-- end: Captions -->
+                    </div>
+                </div>
+            </div>
+            <!-- end: Slide 2 -->
+
+
+        </div>
+        <!--end: Inspiro Slider -->
+
+
+        <!-- WHAT WE DO -->
+        <section>
+            <div class="container" id="Do">
+
+                <div class="heading-text heading-section m-b-80">
+                    <h2>WHAT WE DO</h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="icon-box medium fancy">
+                            <div class="icon"> <a href="#"><i class="fa fa-phone"></i></a> </div>
+                            <h4>Smart Call Outreach</h4>
+                            <p>If you have a product you need to get sold, or need me to email a business about your idea I can set up a meeting for you, and or push a product!</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="icon-box medium fancy">
+                            <div class="icon"> <a href="#"><i class="fa fa-heart"></i></a> </div>
+                            <h4>Dating Advice</h4>
+                            <p>Show you how to get whoever you want from tinder, bumble, the bar, and even at the gym. Just like my friends and I</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="icon-box medium fancy">
+                            <div class="icon"> <a href="#"><i class="far fa-lightbulb"></i></a> </div>
+                            <h4>Website Design</h4>
+                            <p>Creating websites; Anything from ecommerce to gambling websites I can build anything</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="icon-box medium fancy">
+                            <div class="icon"> <a href="#"><i class="fa fa-globe"></i></a> </div>
+                            <h4>Fitness Consulting</h4>
+                            <p>Phone calls once a week, meal plan, and a new workout plan every month.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END WHAT WE DO -->
+        <!-- WHY CHOOSE US -->
+
+        <!-- PARALLAX -->
+        <section class="text-center text-light p-t-50 p-b-50" data-bg-parallax="images/parallax/_5.jpg">
+            <div class="container" id="Test">
+                <h2>What Our Clients Say</h2>
+                <span class="lead">We have delivered results time and time again.</span>
+                <p class="lead">Sarah Wentz, 20 Years old Had this to say stated “I have been receiving Coaching from David for over 2 months now. I have lost 14 pounds, gotten on a healthy exercise and meal schedule and feel great about myself.  The workouts kick your butt.  I’m glad I’m losing weight, but I’m motivated by your commitment to me. That’s why I feel a commitment towards you. Thank you!”
+				</p>
+
+                <a href="https://checkout.stripe.com/c/pay/cs_live_a1NDVzXlwFnIKj0OiXavBUZnAgd5D3t7JQCQWNLOpW40KzHSjnlRj5ClCh#fidkdWxOYHwnPyd1blppbHNgWjA0SXBKVG5HVUtHfWlcNTBpQXwwUjFKbnVtdV9jTzExYXNoQkpvN1QwNVByZHV3bWNmNDxNd1NkQHI1d2JqR3JMYDJQSVBUbmlwZ1RuPVNpYEdhdUFPN2BENTVzXENOYz1GTScpJ3VpbGtuQH11anZgYUxhJz8nMnZMZEJNZExQPWFNZ0FKMWJiJ3gl" class="btn btn-outline btn-light"><span>SUBSCRIBE</span></a>
+				<strong><a href="https://checkout.stripe.com/c/pay/cs_live_a1NDVzXlwFnIKj0OiXavBUZnAgd5D3t7JQCQWNLOpW40KzHSjnlRj5ClCh#fidkdWxOYHwnPyd1blppbHNgWjA0SXBKVG5HVUtHfWlcNTBpQXwwUjFKbnVtdV9jTzExYXNoQkpvN1QwNVByZHV3bWNmNDxNd1NkQHI1d2JqR3JMYDJQSVBUbmlwZ1RuPVNpYEdhdUFPN2BENTVzXENOYz1GTScpJ3VpbGtuQH11anZgYUxhJz8nMnZMZEJNZExQPWFNZ0FKMWJiJ3gl"><p style="color:red;font-size:40px;">SUBSCRIBE HERE!! & HELP SUPPORT THE CAUSE!</p></a></strong>
+
+            </div>
+        </section>
+        <!-- end: PARALLAX -->
+        <!-- HISTORY -->
+       <!-- <section class="background-grey p-b-60">
+            <div class="container" id="History">
+                <div class="heading-text heading-section text-center m-b-40">
+                    <h2>COMPANY HISTORY</h2>
+                    <span class="lead">Promoting diversity and inclusion for our clients for years .</span>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="m-b-40">
+
+
+                            <span class="lead">In fall 2020, the City of Wyoming enlisted Dr. Rik Stevenson to engage city staff, including police and fire departments, in cultural competency training. A lecturer in African American Studies at the University of Florida, Stevenson also has Grand Rapids roots. He once pastored a Christian Reformed church here and taught African American studies at Grand Valley State University and The Grand Rapids Theological Seminary.
+							As of January 2022, all but 10 of Wyoming’s employees have taken part — and those remaining are scheduled for future sessions. Sessions have also been extended to community members, with an emphasis on those who are active on the city’s boards and commissions.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img alt="" class="img-fluid" src="/images/ProPhoto.jpg">
+                    </div>
+                </div>
+            </div>
+        </section>-->
+        <!-- end: HISTORY -->
+        <section>
+            <div class="container">
+                <!-- Testimonials -->
+                <div class="carousel arrows-visibile testimonial testimonial-single testimonial-left" data-items="1" data-autoplay="true" data-loop="true" data-autoplay="3500">
+                    <!-- Testimonials item -->
+                    <div class="testimonial-item">
+                        <img src="images/team/9.jpg" alt="">
+                        <p>Polo is by far the most amazing template out there! I literally could not be happier that I chose to buy this template!</p>
+                        <span>Alan Monre</span>
+                        <span>CEO, Square Software</span>
+                    </div>
+                    <!-- end: Testimonials item-->
+                    <!-- Testimonials item -->
+                    <div class="testimonial-item">
+                        <img src="images/team/9.jpg" alt="">
+                        <p>Polo is by far the most amazing template out there! I literally could not be happier that I chose to buy this template!</p>
+                        <span>Alan Monre</span>
+                        <span>CEO, Square Software</span>
+                    </div>
+                    <!-- end: Testimonials item-->
+                    <!-- Testimonials item -->
+                    <div class="testimonial-item">
+                        <img src="images/team/9.jpg" alt="">
+                        <p>The world is a dangerous place to live; not because of the people who are evil, but because of the people who don't do anything about it.</p>
+                        <span>Alan Monre</span>
+                        <span>CEO, Square Software</span>
+                    </div>
+                    <!-- end: Testimonials item-->
+                </div>
+                <!-- end: Testimonials -->
+                <hr class="space">
+                <!-- Testimonials -->
+                <div class="carousel arrows-visibile testimonial testimonial-single testimonial-blockquote" data-items="1" data-autoplay="true" data-animate-in="fadeIn" data-animate-out="fadeOut" data-loop="true">
+                    <!-- Testimonials item -->
+                    <div class="testimonial-item">
+                        <p>Polo is by far the most amazing template out there! I literally could not be happier that I chose to buy this template!</p>
+                        <span>Alan Monre</span>
+                        <span>CEO, Square Software</span>
+                    </div>
+                    <!-- end: Testimonials item-->
+                    <!-- Testimonials item -->
+                    <div class="testimonial-item">
+                        <p>Polo is by far the most amazing template out there! I literally could not be happier that I chose to buy this template!</p>
+                        <span>Alan Monre</span>
+                        <span>CEO, Square Software</span>
+                    </div>
+                    <!-- end: Testimonials item-->
+                    <!-- Testimonials item -->
+                    <div class="testimonial-item">
+                        <p>The world is a dangerous place to live; not because of the people who are evil, but because of the people who don't do anything about it.</p>
+                        <span>Alan Monre</span>
+                        <span>CEO, Square Software</span>
+                    </div>
+                    <!-- end: Testimonials item-->
+                </div>
+                <!-- end: Testimonials -->
+                <hr class="space">
+                <!-- Testimonials -->
+                <div class="carousel arrows-visibile testimonial testimonial-single" data-items="1" data-loop="true" data-autoplay="true" data-autoplay="3500" data-arrows="false" data-animate-in="fadeIn" data-animate-out="fadeOut">
+                    <!-- Testimonials item -->
+                    <div class="testimonial-item">
+                        <img src="images/team/6.jpg" alt="">
+                        <p>Polo is by far the most amazing template out there! I literally could not be happier that I chose to buy this template!</p>
+                        <span>Alan Monre</span>
+                        <span>CEO, Square Software</span>
+                    </div>
+                    <!-- end: Testimonials item-->
+                    <!-- Testimonials item -->
+                    <div class="testimonial-item">
+                        <img src="images/team/7.jpg" alt="">
+                        <p>Polo is by far the most amazing template out there! I literally could not be happier that I chose to buy this template!</p>
+                        <span>Alan Monre</span>
+                        <span>CEO, Square Software</span>
+                    </div>
+                    <!-- end: Testimonials item-->
+                    <!-- Testimonials item -->
+                    <div class="testimonial-item">
+                        <img src="images/team/8.jpg" alt="">
+                        <p>The world is a dangerous place to live; not because of the people who are evil, but because of the people who don't do anything about it.</p>
+                        <span>Alan Monre</span>
+                        <span>CEO, Square Software</span>
+                    </div>
+                    <!-- end: Testimonials item-->
+                </div>
+                <!-- end: Testimonials -->
+            </div>
+        </section>
+        <!-- CALL TO ACTION -->
+        <div class="call-to-action call-to-action-dark m-b-0" style="background-color: #b41525">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10">
+                        <h3>Don't Hesitate! <strong>Call Now</strong> and we can get started!</h3>
+                        <p>"It is important that those in leadership acknowledge that our country is frayed on all sides by racial, cultural and gender unrest. Therefore, the leaders should train and prepare their people for the inevitable,” Stevenson says. “That is a shift in the way our country looks and functions. Those who are aware and prepare will be successful with societal sustainability, those who don't will eventually become extinct." </p>
+                    </div>
+                    <div class="col-lg-2"> <a class="btn btn-outline btn-light" href="https://checkout.stripe.com/c/pay/cs_live_a1NDVzXlwFnIKj0OiXavBUZnAgd5D3t7JQCQWNLOpW40KzHSjnlRj5ClCh#fidkdWxOYHwnPyd1blppbHNgWjA0SXBKVG5HVUtHfWlcNTBpQXwwUjFKbnVtdV9jTzExYXNoQkpvN1QwNVByZHV3bWNmNDxNd1NkQHI1d2JqR3JMYDJQSVBUbmlwZ1RuPVNpYEdhdUFPN2BENTVzXENOYz1GTScpJ3VpbGtuQH11anZgYUxhJz8nMnZMZEJNZExQPWFNZ0FKMWJiJ3gl">SUBSCRIBE!</a> </div>
+                </div>
+            </div>
+        </div>
+        <!-- end: CALL TO ACTION -->
+        <!-- Contact -->
+        <section id=estimate class="p-t-100 p-b-80">
+            <div class="container" id="Contact">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h2 class="m-b-10">Get in Touch with Us</h2>
+                                <p class="lead">We are based in North Central, Florida <br> Call Now to book a consultation </p>
+                            </div>
+                            <div class="col-lg-6 m-b-30">
+                                <address>
+                                    <strong>Headquarters:</strong><br>
+                                    USA<br>
+									<br>
+                                </address>
+                                <strong>Phone:</strong> +1 (616) 780-0749
+                                <br>
+                                <strong>Email:</strong> drrik@rls2consulting.com
+                            </div>
+                            <div class="col-lg-12 m-b-30">
+                                <h4>We are social</h4>
+                                <div class="social-icons social-icons-light social-icons-colored-hover">
+                                    <ul>
+                                        <li class="social-rss"><a href="#"><i class="fa fa-rss"></i></a></li>
+                                        <li class="social-facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                        <li class="social-instagram"><a href="https://www.instagram.com/alhajaziservices/"><i class="fab fa-instagram"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 offset-1">
+                        <form class="widget-contact-form" novalidate action="include/contact-form.php" role="form" method="post">
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="name">Name</label>
+                                    <input type="text" aria-required="true" required name="widget-contact-form-name" class="form-control required name" placeholder="Enter your Name">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="email">Email</label>
+                                    <input type="email" aria-required="true" required name="widget-contact-form-email" class="form-control required email" placeholder="Enter your Email">
+                                </div>
+								
+                            </div>
+							<div class="row">
+								<div class="form-group col-md-6">
+									<label for="company">Company</label>
+									<input type="text" class="form-control" name="widget-contact-form-company" placeholder="Enter your company" required>
+								</div>
+								<div class="form-group col-md-6">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="phone" aria-required="true" required name="widget-contact-form-phone" class="form-control required email" placeholder="Enter your phone">
+                                </div>
+							</div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea type="text" required name="widget-contact-form-message" rows="8" class="form-control required" placeholder="Enter your Message"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-light" type="submit" id="form-submit"><i class="fa fa-paper-plane"></i>&nbsp;Send message</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end: Contact -->
+
+        <!-- Footer -->
+
+            <div class="copyright-content">
+                <div class="container">
+                    <div class="copyright-text text-center">&copy; 2022 RLS II Consulting. All Rights Reserved.</a> </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end: Footer -->
+
+    </div>
+    <!-- end: Body Inner -->
+
+    <!-- Scroll top -->
+    <a id="scrollTop"><i class="icon-chevron-up"></i><i class="icon-chevron-up"></i></a>
+    <!--Plugins-->
+    <script src="js/jquery.js"></script>
+    <script src="js/plugins.js"></script>
+
+    <!--Template functions-->
+    <script src="js/functions.js"></script>
+
 </body>
+
 </html>
